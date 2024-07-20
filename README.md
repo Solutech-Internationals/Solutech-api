@@ -21,11 +21,11 @@ powershell -c "irm bun.sh/install.ps1|iex"
 bun --version
 ```
 
- 1. Clone the repository:
+### Clone the repository:
 ```bash
 git clone https://github.com/Solutech-Internationals/Solutech-api.git
 ```
- 2. Install the dependencies:
+### Install the dependencies:
 
 ```bash
  bun install
@@ -35,3 +35,12 @@ git clone https://github.com/Solutech-Internationals/Solutech-api.git
 ```bash
 bun dev
 ```
+ # Postman Collection
+- To test the API, you can import the provided Postman collection:
+
+ 1. Open Postman.
+ 2. Click on the Import button.
+ 3. Select the `soluTech-api.postman_collection.json` file from the project directory.
+ 4. Click on Import.
+ 
+- This will import all the API endpoints for testing.
