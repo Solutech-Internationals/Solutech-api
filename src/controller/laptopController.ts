@@ -40,6 +40,7 @@ export const readLaptop = async (req: Request, res: Response) => {
         const laptop = await Laptop.findById(id);
         if (!laptop) {
             res.status(404).send();
+            return;
         }
         res.status(200).send(laptop);
     } catch (error) {
