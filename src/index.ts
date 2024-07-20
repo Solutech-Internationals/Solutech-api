@@ -1,5 +1,6 @@
 import express from "express";
 import laptopRoutes from "./routes/laptopRoutes"
+import mobilePhoneRoutes from "./routes/mobilePhoneRoutes"
 import connectDB from "./config/db"
 
 
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/', laptopRoutes);
+app.use('/api/', mobilePhoneRoutes);
 
 app.listen(port, () => {
     console.log(`Listening on port: ${port} `);
