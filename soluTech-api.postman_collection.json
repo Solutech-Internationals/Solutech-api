@@ -1,0 +1,516 @@
+{
+	"info": {
+		"_postman_id": "f066d50d-95cb-4f4a-9bcc-fc9bc7e2c297",
+		"name": "soluTech-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27054693"
+	},
+	"item": [
+		{
+			"name": "Mobile Phones",
+			"item": [
+				{
+					"name": "Mobile Phone Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"{{$randomJobTitle}}\",\r\n  \"price\": \"{{$randomPrice}}\",\r\n  \"url\": \"{{$randomUrl}}\",\r\n  \"image\": \"{{$randomImageUrl}}\",\r\n  \"description\": \"{{$randomJobDescriptor}}\",\r\n  \"site\": \"{{$randomWord}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}mobilePhone",
+							"host": [
+								"{{baseURL}}mobilePhone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save Mobiles",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"title\": \"{{$randomJobTitle}}\",\r\n        \"price\": \"{{$randomPrice}}\",\r\n        \"url\": \"{{$randomUrl}}\",\r\n        \"image\": \"{{$randomImageUrl}}\",\r\n        \"description\": \"{{$randomJobDescriptor}}\",\r\n        \"site\": \"{{$randomWord}}\"\r\n    },\r\n    {\r\n        \"title\": \"{{$randomJobTitle}}\",\r\n        \"price\": \"{{$randomPrice}}\",\r\n        \"url\": \"{{$randomUrl}}\",\r\n        \"image\": \"{{$randomImageUrl}}\",\r\n        \"description\": \"{{$randomJobDescriptor}}\",\r\n        \"site\": \"{{$randomWord}}\"\r\n    },\r\n    {\r\n        \"title\": \"{{$randomJobTitle}}\",\r\n        \"price\": \"{{$randomPrice}}\",\r\n        \"url\": \"{{$randomUrl}}\",\r\n        \"image\": \"{{$randomImageUrl}}\",\r\n        \"description\": \"{{$randomJobDescriptor}}\",\r\n        \"site\": \"{{$randomWord}}\"\r\n    },\r\n    {\r\n        \"title\": \"{{$randomJobTitle}}\",\r\n        \"price\": \"{{$randomPrice}}\",\r\n        \"url\": \"{{$randomUrl}}\",\r\n        \"image\": \"{{$randomImageUrl}}\",\r\n        \"description\": \"{{$randomJobDescriptor}}\",\r\n        \"site\": \"{{$randomWord}}\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}saveMobilePhones",
+							"host": [
+								"{{baseURL}}saveMobilePhones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one Mobile Phone",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}mobilePhone/669b7a982a7d3ffa183fad19",
+							"host": [
+								"{{baseURL}}mobilePhone"
+							],
+							"path": [
+								"669b7a982a7d3ffa183fad19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get All Mobile Phones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}mobilePhones",
+							"host": [
+								"{{baseURL}}mobilePhones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Mobile Phone",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"{{$randomJobTitle}}\",\r\n  \"price\": \"{{$randomPrice}}\",\r\n  \"url\": \"{{$randomUrl}}\",\r\n  \"image\": \"{{$randomImageUrl}}\",\r\n  \"description\": \"{{$randomJobDescriptor}}\",\r\n  \"site\": \"{{$randomWord}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}mobilePhone/669b7a982a7d3ffa183fad19",
+							"host": [
+								"{{baseURL}}mobilePhone"
+							],
+							"path": [
+								"669b7a982a7d3ffa183fad19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Mobile Phone",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}mobilePhone/669b7a982a7d3ffa183fad19",
+							"host": [
+								"{{baseURL}}mobilePhone"
+							],
+							"path": [
+								"669b7a982a7d3ffa183fad19"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Laptop",
+			"item": [
+				{
+					"name": "save one laptop",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Dell XPS 15\",\r\n  \"price\": \"1500\",\r\n  \"url\": \"https://example.com/dell-xps-15\",\r\n  \"image\": \"https://example.com/images/dell-xps-15.jpg\",\r\n  \"description\": \"The Dell XPS 15 offers a stunning 4K display, powerful 10th gen Intel processor, and up to 32GB RAM for seamless multitasking.\",\r\n  \"ram\": \"16GB\",\r\n  \"gpu\": \"NVIDIA GTX 1650 Ti\",\r\n  \"processor\": \"Intel Core i7-10750H\",\r\n  \"storage\": \"512GB SSD\",\r\n  \"good_for_students\": true,\r\n  \"good_for_students_reason\": \"Lightweight and long battery life\",\r\n  \"good_for_developers\": true,\r\n  \"good_for_developers_reason\": \"Powerful processor and ample RAM\",\r\n  \"good_for_video_editors\": true,\r\n  \"good_for_video_editors_reason\": \"4K display and dedicated GPU\",\r\n  \"good_for_gaming\": true,\r\n  \"good_for_gaming_reason\": \"Dedicated GPU and high performance\",\r\n  \"good_for_business\": true,\r\n  \"good_for_business_reason\": \"Reliable build and professional design\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}laptop",
+							"host": [
+								"{{baseURL}}laptop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save multiple Laptops",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"title\": \"Dell XPS 15\",\r\n        \"price\": \"1500\",\r\n        \"url\": \"https://example.com/dell-xps-15\",\r\n        \"image\": \"https://example.com/images/dell-xps-15.jpg\",\r\n        \"description\": \"The Dell XPS 15 offers a stunning 4K display, powerful 10th gen Intel processor, and up to 32GB RAM for seamless multitasking.\",\r\n        \"ram\": \"16GB\",\r\n        \"gpu\": \"NVIDIA GTX 1650 Ti\",\r\n        \"processor\": \"Intel Core i7-10750H\",\r\n        \"storage\": \"512GB SSD\",\r\n        \"good_for_students\": true,\r\n        \"good_for_students_reason\": \"Lightweight and long battery life\",\r\n        \"good_for_developers\": true,\r\n        \"good_for_developers_reason\": \"Powerful processor and ample RAM\",\r\n        \"good_for_video_editors\": true,\r\n        \"good_for_video_editors_reason\": \"4K display and dedicated GPU\",\r\n        \"good_for_gaming\": true,\r\n        \"good_for_gaming_reason\": \"Dedicated GPU and high performance\",\r\n        \"good_for_business\": true,\r\n        \"good_for_business_reason\": \"Reliable build and professional design\"\r\n    },\r\n    \r\n    {\r\n        \"title\": \"Dell XPS 15\",\r\n        \"price\": \"1500\",\r\n        \"url\": \"https://example.com/dell-xps-15\",\r\n        \"image\": \"https://example.com/images/dell-xps-15.jpg\",\r\n        \"description\": \"The Dell XPS 15 offers a stunning 4K display, powerful 10th gen Intel processor, and up to 32GB RAM for seamless multitasking.\",\r\n        \"ram\": \"16GB\",\r\n        \"gpu\": \"NVIDIA GTX 1650 Ti\",\r\n        \"processor\": \"Intel Core i7-10750H\",\r\n        \"storage\": \"512GB SSD\",\r\n        \"good_for_students\": true,\r\n        \"good_for_students_reason\": \"Lightweight and long battery life\",\r\n        \"good_for_developers\": true,\r\n        \"good_for_developers_reason\": \"Powerful processor and ample RAM\",\r\n        \"good_for_video_editors\": true,\r\n        \"good_for_video_editors_reason\": \"4K display and dedicated GPU\",\r\n        \"good_for_gaming\": true,\r\n        \"good_for_gaming_reason\": \"Dedicated GPU and high performance\",\r\n        \"good_for_business\": true,\r\n        \"good_for_business_reason\": \"Reliable build and professional design\"\r\n    },\r\n    {\r\n        \"title\": \"Dell XPS 15\",\r\n        \"price\": \"1500\",\r\n        \"url\": \"https://example.com/dell-xps-15\",\r\n        \"image\": \"https://example.com/images/dell-xps-15.jpg\",\r\n        \"description\": \"The Dell XPS 15 offers a stunning 4K display, powerful 10th gen Intel processor, and up to 32GB RAM for seamless multitasking.\",\r\n        \"ram\": \"16GB\",\r\n        \"gpu\": \"NVIDIA GTX 1650 Ti\",\r\n        \"processor\": \"Intel Core i7-10750H\",\r\n        \"storage\": \"512GB SSD\",\r\n        \"good_for_students\": true,\r\n        \"good_for_students_reason\": \"Lightweight and long battery life\",\r\n        \"good_for_developers\": true,\r\n        \"good_for_developers_reason\": \"Powerful processor and ample RAM\",\r\n        \"good_for_video_editors\": true,\r\n        \"good_for_video_editors_reason\": \"4K display and dedicated GPU\",\r\n        \"good_for_gaming\": true,\r\n        \"good_for_gaming_reason\": \"Dedicated GPU and high performance\",\r\n        \"good_for_business\": true,\r\n        \"good_for_business_reason\": \"Reliable build and professional design\"\r\n    },\r\n    {\r\n        \"title\": \"Dell XPS 15\",\r\n        \"price\": \"1500\",\r\n        \"url\": \"https://example.com/dell-xps-15\",\r\n        \"image\": \"https://example.com/images/dell-xps-15.jpg\",\r\n        \"description\": \"The Dell XPS 15 offers a stunning 4K display, powerful 10th gen Intel processor, and up to 32GB RAM for seamless multitasking.\",\r\n        \"ram\": \"16GB\",\r\n        \"gpu\": \"NVIDIA GTX 1650 Ti\",\r\n        \"processor\": \"Intel Core i7-10750H\",\r\n        \"storage\": \"512GB SSD\",\r\n        \"good_for_students\": true,\r\n        \"good_for_students_reason\": \"Lightweight and long battery life\",\r\n        \"good_for_developers\": true,\r\n        \"good_for_developers_reason\": \"Powerful processor and ample RAM\",\r\n        \"good_for_video_editors\": true,\r\n        \"good_for_video_editors_reason\": \"4K display and dedicated GPU\",\r\n        \"good_for_gaming\": true,\r\n        \"good_for_gaming_reason\": \"Dedicated GPU and high performance\",\r\n        \"good_for_business\": true,\r\n        \"good_for_business_reason\": \"Reliable build and professional design\"\r\n    },\r\n    {\r\n        \"title\": \"Dell XPS 15\",\r\n        \"price\": \"1500\",\r\n        \"url\": \"https://example.com/dell-xps-15\",\r\n        \"image\": \"https://example.com/images/dell-xps-15.jpg\",\r\n        \"description\": \"The Dell XPS 15 offers a stunning 4K display, powerful 10th gen Intel processor, and up to 32GB RAM for seamless multitasking.\",\r\n        \"ram\": \"16GB\",\r\n        \"gpu\": \"NVIDIA GTX 1650 Ti\",\r\n        \"processor\": \"Intel Core i7-10750H\",\r\n        \"storage\": \"512GB SSD\",\r\n        \"good_for_students\": true,\r\n        \"good_for_students_reason\": \"Lightweight and long battery life\",\r\n        \"good_for_developers\": true,\r\n        \"good_for_developers_reason\": \"Powerful processor and ample RAM\",\r\n        \"good_for_video_editors\": true,\r\n        \"good_for_video_editors_reason\": \"4K display and dedicated GPU\",\r\n        \"good_for_gaming\": true,\r\n        \"good_for_gaming_reason\": \"Dedicated GPU and high performance\",\r\n        \"good_for_business\": true,\r\n        \"good_for_business_reason\": \"Reliable build and professional design\"\r\n    },\r\n    {\r\n        \"title\": \"Dell XPS 15\",\r\n        \"price\": \"1500\",\r\n        \"url\": \"https://example.com/dell-xps-15\",\r\n        \"image\": \"https://example.com/images/dell-xps-15.jpg\",\r\n        \"description\": \"The Dell XPS 15 offers a stunning 4K display, powerful 10th gen Intel processor, and up to 32GB RAM for seamless multitasking.\",\r\n        \"ram\": \"16GB\",\r\n        \"gpu\": \"NVIDIA GTX 1650 Ti\",\r\n        \"processor\": \"Intel Core i7-10750H\",\r\n        \"storage\": \"512GB SSD\",\r\n        \"good_for_students\": true,\r\n        \"good_for_students_reason\": \"Lightweight and long battery life\",\r\n        \"good_for_developers\": true,\r\n        \"good_for_developers_reason\": \"Powerful processor and ample RAM\",\r\n        \"good_for_video_editors\": true,\r\n        \"good_for_video_editors_reason\": \"4K display and dedicated GPU\",\r\n        \"good_for_gaming\": true,\r\n        \"good_for_gaming_reason\": \"Dedicated GPU and high performance\",\r\n        \"good_for_business\": true,\r\n        \"good_for_business_reason\": \"Reliable build and professional design\"\r\n    },\r\n    {\r\n        \"title\": \"Dell XPS 15\",\r\n        \"price\": \"1500\",\r\n        \"url\": \"https://example.com/dell-xps-15\",\r\n        \"image\": \"https://example.com/images/dell-xps-15.jpg\",\r\n        \"description\": \"The Dell XPS 15 offers a stunning 4K display, powerful 10th gen Intel processor, and up to 32GB RAM for seamless multitasking.\",\r\n        \"ram\": \"16GB\",\r\n        \"gpu\": \"NVIDIA GTX 1650 Ti\",\r\n        \"processor\": \"Intel Core i7-10750H\",\r\n        \"storage\": \"512GB SSD\",\r\n        \"good_for_students\": true,\r\n        \"good_for_students_reason\": \"Lightweight and long battery life\",\r\n        \"good_for_developers\": true,\r\n        \"good_for_developers_reason\": \"Powerful processor and ample RAM\",\r\n        \"good_for_video_editors\": true,\r\n        \"good_for_video_editors_reason\": \"4K display and dedicated GPU\",\r\n        \"good_for_gaming\": true,\r\n        \"good_for_gaming_reason\": \"Dedicated GPU and high performance\",\r\n        \"good_for_business\": true,\r\n        \"good_for_business_reason\": \"Reliable build and professional design\"\r\n    },\r\n    {\r\n        \"title\": \"Dell XPS 15\",\r\n        \"price\": \"1500\",\r\n        \"url\": \"https://example.com/dell-xps-15\",\r\n        \"image\": \"https://example.com/images/dell-xps-15.jpg\",\r\n        \"description\": \"The Dell XPS 15 offers a stunning 4K display, powerful 10th gen Intel processor, and up to 32GB RAM for seamless multitasking.\",\r\n        \"ram\": \"16GB\",\r\n        \"gpu\": \"NVIDIA GTX 1650 Ti\",\r\n        \"processor\": \"Intel Core i7-10750H\",\r\n        \"storage\": \"512GB SSD\",\r\n        \"good_for_students\": true,\r\n        \"good_for_students_reason\": \"Lightweight and long battery life\",\r\n        \"good_for_developers\": true,\r\n        \"good_for_developers_reason\": \"Powerful processor and ample RAM\",\r\n        \"good_for_video_editors\": true,\r\n        \"good_for_video_editors_reason\": \"4K display and dedicated GPU\",\r\n        \"good_for_gaming\": true,\r\n        \"good_for_gaming_reason\": \"Dedicated GPU and high performance\",\r\n        \"good_for_business\": true,\r\n        \"good_for_business_reason\": \"Reliable build and professional design\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}saveLaptops",
+							"host": [
+								"{{baseURL}}saveLaptops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one Laptop",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}laptop/669b7e056eb11e592ae8585a",
+							"host": [
+								"{{baseURL}}laptop"
+							],
+							"path": [
+								"669b7e056eb11e592ae8585a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all laptops",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}laptops",
+							"host": [
+								"{{baseURL}}laptops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Laptop",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Dell XPS 15\",\r\n  \"price\": \"1500\",\r\n  \"url\": \"https://example.com/dell-xps-15\",\r\n  \"image\": \"https://example.com/images/dell-xps-15.jpg\",\r\n  \"description\": \"The Dell XPS 15 offers a stunning 4K display, powerful 10th gen Intel processor, and up to 32GB RAM for seamless multitasking.\",\r\n  \"ram\": \"16GB\",\r\n  \"gpu\": \"NVIDIA GTX 1650 Ti\",\r\n  \"processor\": \"Intel Core i7-10750H\",\r\n  \"storage\": \"512GB SSD\",\r\n  \"good_for_students\": true,\r\n  \"good_for_students_reason\": \"Lightweight and long battery life\",\r\n  \"good_for_developers\": true,\r\n  \"good_for_developers_reason\": \"Powerful processor and ample RAM\",\r\n  \"good_for_video_editors\": true,\r\n  \"good_for_video_editors_reason\": \"4K display and dedicated GPU\",\r\n  \"good_for_gaming\": true,\r\n  \"good_for_gaming_reason\": \"Dedicated GPU and high performance\",\r\n  \"good_for_business\": true,\r\n  \"good_for_business_reason\": \"Reliable build and professional design\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}laptop/669b7e056eb11e592ae8585a",
+							"host": [
+								"{{baseURL}}laptop"
+							],
+							"path": [
+								"669b7e056eb11e592ae8585a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Laptop",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}laptop/669b7e056eb11e592ae8585a",
+							"host": [
+								"{{baseURL}}laptop"
+							],
+							"path": [
+								"669b7e056eb11e592ae8585a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Car",
+			"item": [
+				{
+					"name": "save one Car",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"2020 Tesla Model S\",\r\n  \"price\": \"79900\",\r\n  \"url\": \"https://www.example.com/2020-tesla-model-s\",\r\n  \"image\": \"https://www.example.com/images/2020-tesla-model-s.jpg\",\r\n  \"description\": \"Luxury electric sedan with long range and high performance.\",\r\n  \"modelYear\": \"2020\",\r\n  \"condition\": \"New\",\r\n  \"transmission\": \"Automatic\",\r\n  \"manufacturer\": \"Tesla\",\r\n  \"model\": \"Model S\",\r\n  \"fuelType\": \"Electric\",\r\n  \"engineCapacity\": \"N/A\",\r\n  \"mileage\": \"0\",\r\n  \"color\": \"Red\",\r\n  \"site\": \"Main Showroom\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}car",
+							"host": [
+								"{{baseURL}}car"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save multiple cars",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"title\": \"2020 Tesla Model S\",\r\n        \"price\": \"79900\",\r\n        \"url\": \"https://www.example.com/2020-tesla-model-s\",\r\n        \"image\": \"https://www.example.com/images/2020-tesla-model-s.jpg\",\r\n        \"description\": \"Luxury electric sedan with long range and high performance.\",\r\n        \"modelYear\": \"2020\",\r\n        \"condition\": \"New\",\r\n        \"transmission\": \"Automatic\",\r\n        \"manufacturer\": \"Tesla\",\r\n        \"model\": \"Model S\",\r\n        \"fuelType\": \"Electric\",\r\n        \"engineCapacity\": \"N/A\",\r\n        \"mileage\": \"0\",\r\n        \"color\": \"Red\",\r\n        \"site\": \"Main Showroom\"\r\n        },\r\n        \r\n    {\r\n        \"title\": \"2020 Tesla Model S\",\r\n        \"price\": \"79900\",\r\n        \"url\": \"https://www.example.com/2020-tesla-model-s\",\r\n        \"image\": \"https://www.example.com/images/2020-tesla-model-s.jpg\",\r\n        \"description\": \"Luxury electric sedan with long range and high performance.\",\r\n        \"modelYear\": \"2020\",\r\n        \"condition\": \"New\",\r\n        \"transmission\": \"Automatic\",\r\n        \"manufacturer\": \"Tesla\",\r\n        \"model\": \"Model S\",\r\n        \"fuelType\": \"Electric\",\r\n        \"engineCapacity\": \"N/A\",\r\n        \"mileage\": \"0\",\r\n        \"color\": \"Red\",\r\n        \"site\": \"Main Showroom\"\r\n        },\r\n        \r\n    {\r\n        \"title\": \"2020 Tesla Model S\",\r\n        \"price\": \"79900\",\r\n        \"url\": \"https://www.example.com/2020-tesla-model-s\",\r\n        \"image\": \"https://www.example.com/images/2020-tesla-model-s.jpg\",\r\n        \"description\": \"Luxury electric sedan with long range and high performance.\",\r\n        \"modelYear\": \"2020\",\r\n        \"condition\": \"New\",\r\n        \"transmission\": \"Automatic\",\r\n        \"manufacturer\": \"Tesla\",\r\n        \"model\": \"Model S\",\r\n        \"fuelType\": \"Electric\",\r\n        \"engineCapacity\": \"N/A\",\r\n        \"mileage\": \"0\",\r\n        \"color\": \"Red\",\r\n        \"site\": \"Main Showroom\"\r\n        },\r\n        \r\n    {\r\n        \"title\": \"2020 Tesla Model S\",\r\n        \"price\": \"79900\",\r\n        \"url\": \"https://www.example.com/2020-tesla-model-s\",\r\n        \"image\": \"https://www.example.com/images/2020-tesla-model-s.jpg\",\r\n        \"description\": \"Luxury electric sedan with long range and high performance.\",\r\n        \"modelYear\": \"2020\",\r\n        \"condition\": \"New\",\r\n        \"transmission\": \"Automatic\",\r\n        \"manufacturer\": \"Tesla\",\r\n        \"model\": \"Model S\",\r\n        \"fuelType\": \"Electric\",\r\n        \"engineCapacity\": \"N/A\",\r\n        \"mileage\": \"0\",\r\n        \"color\": \"Red\",\r\n        \"site\": \"Main Showroom\"\r\n        }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}saveCars",
+							"host": [
+								"{{baseURL}}saveCars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one car",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}car/669b88c4a8dda5ea2931d02a",
+							"host": [
+								"{{baseURL}}car"
+							],
+							"path": [
+								"669b88c4a8dda5ea2931d02a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get multiple cars",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}cars",
+							"host": [
+								"{{baseURL}}cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update car",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n    {\r\n        \"title\": \"2020 Tesla Model S\",\r\n        \"price\": \"79900\",\r\n        \"url\": \"https://www.example.com/2020-tesla-model-s\",\r\n        \"image\": \"https://www.example.com/images/2020-tesla-model-s.jpg\",\r\n        \"description\": \"Luxury electric sedan with long range and high performance.\",\r\n        \"modelYear\": \"2020\",\r\n        \"condition\": \"New\",\r\n        \"transmission\": \"Automatic\",\r\n        \"manufacturer\": \"Tesla\",\r\n        \"model\": \"Model S\",\r\n        \"fuelType\": \"Electric\",\r\n        \"engineCapacity\": \"N/A\",\r\n        \"mileage\": \"0\",\r\n        \"color\": \"Red\",\r\n        \"site\": \"Main Showroom\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}car/669b88c4a8dda5ea2931d02a",
+							"host": [
+								"{{baseURL}}car"
+							],
+							"path": [
+								"669b88c4a8dda5ea2931d02a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete car",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}car/669b88c4a8dda5ea2931d02a",
+							"host": [
+								"{{baseURL}}car"
+							],
+							"path": [
+								"669b88c4a8dda5ea2931d02a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bike",
+			"item": [
+				{
+					"name": "save one Bike",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Mountain Bike\",\r\n  \"price\": \"1200\",\r\n  \"url\": \"https://example.com/bike/mountain-bike\",\r\n  \"image\": \"https://example.com/images/mountain-bike.jpg\",\r\n  \"description\": \"A high-quality mountain bike suitable for all terrains.\",\r\n  \"modelYear\": \"2021\",\r\n  \"condition\": \"New\",\r\n  \"transmission\": \"Manual\",\r\n  \"manufacturer\": \"BikeCo\",\r\n  \"model\": \"XTR\",\r\n  \"fuelType\": \"N/A\",\r\n  \"engineCapacity\": \"N/A\",\r\n  \"mileage\": \"0\",\r\n  \"color\": \"Black\",\r\n  \"site\": \"ExampleBikes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}bike",
+							"host": [
+								"{{baseURL}}bike"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save multiple Bikes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"title\": \"Mountain Bike\",\r\n        \"price\": \"1200\",\r\n        \"url\": \"https://example.com/bike/mountain-bike\",\r\n        \"image\": \"https://example.com/images/mountain-bike.jpg\",\r\n        \"description\": \"A high-quality mountain bike suitable for all terrains.\",\r\n        \"modelYear\": \"2021\",\r\n        \"condition\": \"New\",\r\n        \"transmission\": \"Manual\",\r\n        \"manufacturer\": \"BikeCo\",\r\n        \"model\": \"XTR\",\r\n        \"fuelType\": \"N/A\",\r\n        \"engineCapacity\": \"N/A\",\r\n        \"mileage\": \"0\",\r\n        \"color\": \"Black\",\r\n        \"site\": \"ExampleBikes\"\r\n    },\r\n        {\r\n        \"title\": \"Mountain Bike\",\r\n        \"price\": \"1200\",\r\n        \"url\": \"https://example.com/bike/mountain-bike\",\r\n        \"image\": \"https://example.com/images/mountain-bike.jpg\",\r\n        \"description\": \"A high-quality mountain bike suitable for all terrains.\",\r\n        \"modelYear\": \"2021\",\r\n        \"condition\": \"New\",\r\n        \"transmission\": \"Manual\",\r\n        \"manufacturer\": \"BikeCo\",\r\n        \"model\": \"XTR\",\r\n        \"fuelType\": \"N/A\",\r\n        \"engineCapacity\": \"N/A\",\r\n        \"mileage\": \"0\",\r\n        \"color\": \"Black\",\r\n        \"site\": \"ExampleBikes\"\r\n    },\r\n        {\r\n        \"title\": \"Mountain Bike\",\r\n        \"price\": \"1200\",\r\n        \"url\": \"https://example.com/bike/mountain-bike\",\r\n        \"image\": \"https://example.com/images/mountain-bike.jpg\",\r\n        \"description\": \"A high-quality mountain bike suitable for all terrains.\",\r\n        \"modelYear\": \"2021\",\r\n        \"condition\": \"New\",\r\n        \"transmission\": \"Manual\",\r\n        \"manufacturer\": \"BikeCo\",\r\n        \"model\": \"XTR\",\r\n        \"fuelType\": \"N/A\",\r\n        \"engineCapacity\": \"N/A\",\r\n        \"mileage\": \"0\",\r\n        \"color\": \"Black\",\r\n        \"site\": \"ExampleBikes\"\r\n    },\r\n        {\r\n        \"title\": \"Mountain Bike\",\r\n        \"price\": \"1200\",\r\n        \"url\": \"https://example.com/bike/mountain-bike\",\r\n        \"image\": \"https://example.com/images/mountain-bike.jpg\",\r\n        \"description\": \"A high-quality mountain bike suitable for all terrains.\",\r\n        \"modelYear\": \"2021\",\r\n        \"condition\": \"New\",\r\n        \"transmission\": \"Manual\",\r\n        \"manufacturer\": \"BikeCo\",\r\n        \"model\": \"XTR\",\r\n        \"fuelType\": \"N/A\",\r\n        \"engineCapacity\": \"N/A\",\r\n        \"mileage\": \"0\",\r\n        \"color\": \"Black\",\r\n        \"site\": \"ExampleBikes\"\r\n    },\r\n        {\r\n        \"title\": \"Mountain Bike\",\r\n        \"price\": \"1200\",\r\n        \"url\": \"https://example.com/bike/mountain-bike\",\r\n        \"image\": \"https://example.com/images/mountain-bike.jpg\",\r\n        \"description\": \"A high-quality mountain bike suitable for all terrains.\",\r\n        \"modelYear\": \"2021\",\r\n        \"condition\": \"New\",\r\n        \"transmission\": \"Manual\",\r\n        \"manufacturer\": \"BikeCo\",\r\n        \"model\": \"XTR\",\r\n        \"fuelType\": \"N/A\",\r\n        \"engineCapacity\": \"N/A\",\r\n        \"mileage\": \"0\",\r\n        \"color\": \"Black\",\r\n        \"site\": \"ExampleBikes\"\r\n    },\r\n        {\r\n        \"title\": \"Mountain Bike\",\r\n        \"price\": \"1200\",\r\n        \"url\": \"https://example.com/bike/mountain-bike\",\r\n        \"image\": \"https://example.com/images/mountain-bike.jpg\",\r\n        \"description\": \"A high-quality mountain bike suitable for all terrains.\",\r\n        \"modelYear\": \"2021\",\r\n        \"condition\": \"New\",\r\n        \"transmission\": \"Manual\",\r\n        \"manufacturer\": \"BikeCo\",\r\n        \"model\": \"XTR\",\r\n        \"fuelType\": \"N/A\",\r\n        \"engineCapacity\": \"N/A\",\r\n        \"mileage\": \"0\",\r\n        \"color\": \"Black\",\r\n        \"site\": \"ExampleBikes\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}saveBikes",
+							"host": [
+								"{{baseURL}}saveBikes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all Bikes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}bikes",
+							"host": [
+								"{{baseURL}}bikes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Bike",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}bike/669b9e637470268e929bf40a",
+							"host": [
+								"{{baseURL}}bike"
+							],
+							"path": [
+								"669b9e637470268e929bf40a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Bike",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"title\": \"Mountain Bike\",\r\n        \"price\": \"1200\",\r\n        \"url\": \"https://example.com/bike/mountain-bike\",\r\n        \"image\": \"https://example.com/images/mountain-bike.jpg\",\r\n        \"description\": \"A high-quality mountain bike suitable for all terrains.\",\r\n        \"modelYear\": \"2021\",\r\n        \"condition\": \"New\",\r\n        \"transmission\": \"Manual\",\r\n        \"manufacturer\": \"BikeCo\",\r\n        \"model\": \"XTR\",\r\n        \"fuelType\": \"N/A\",\r\n        \"engineCapacity\": \"N/A\",\r\n        \"mileage\": \"0\",\r\n        \"color\": \"Black\",\r\n        \"site\": \"ExampleBikes\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}bike/669b9e637470268e929bf40a",
+							"host": [
+								"{{baseURL}}bike"
+							],
+							"path": [
+								"669b9e637470268e929bf40a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Bike",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}bike/669b9e637470268e929bf40a",
+							"host": [
+								"{{baseURL}}bike"
+							],
+							"path": [
+								"669b9e637470268e929bf40a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:8080/api/"
+		}
+	]
+}
