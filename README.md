@@ -35,6 +35,14 @@ git clone https://github.com/Solutech-Internationals/Solutech-api.git
 ```bash
 bun dev
 ```
+
+## Configuring CORS
+
+- To ensure your API only accepts requests from your frontend application, you need to update the CORS configuration.
+
+1. Open src/config/corsOptions.ts.
+2. Update the origin property to your frontend domain. Replace 'https://your-frontend-domain.com' with your actual frontend URL:
+
  # Postman Collection
 - To test the API, you can import the provided Postman collection:
 
