@@ -23,59 +23,45 @@ const laptopSchema = new mongoose.Schema({
     },
     ram: {
         type: String,
-        required: true,
     },
     gpu: {
         type: String,
-        required: true,
     },
     processor: {
         type: String,
-        required: true,
     },
     storage: {
         type: String,
-        required: true,
     },
     good_for_students: {
         type: Boolean,
-        required: true,
     },
     good_for_students_reason: {
         type: String,
-        required: false,
     },
     good_for_developers: {
         type: Boolean,
-        required: true,
     },
     good_for_developers_reason: {
         type: String,
-        required: false,
     },
     good_for_video_editors: {
         type: Boolean,
-        required: true,
     },
     good_for_video_editors_reason: {
         type: String,
-        required: false,
     },
     good_for_gaming: {
         type: Boolean,
-        required: true,
     },
     good_for_gaming_reason: {
         type: String,
-        required: false,
     },
     good_for_business: {
         type: Boolean,
-        required: true,
     },
     good_for_business_reason: {
         type: String,
-        required: false,
     },
 }, {
     timestamps: true,
