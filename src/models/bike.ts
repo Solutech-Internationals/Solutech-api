@@ -14,8 +14,8 @@ const bikeSchema = new mongoose.Schema({
         required: true,
     },
     image: {
-        type: String,
-        required: false,
+        type: Array,
+        required: true,
     },
     description: {
         type: String,
@@ -23,39 +23,30 @@ const bikeSchema = new mongoose.Schema({
     },
     modelYear: {
         type: String,
-        required: true,
     },
     condition: {
         type: String,
-        required: true,
     },
     transmission: {
         type: String,
-        required: true,
     },
     manufacturer: {
         type: String,
-        required: true,
     },
     model: {
         type: String,
-        required: true,
     },
     fuelType: {
         type: String,
-        required: true,
     },
     engineCapacity: {
         type: String,
-        required: true,
     },
     mileage: {
         type: String,
-        required: true,
     },
     color: {
         type: String,
-        required: true,
     },
     site: {
         type: String,

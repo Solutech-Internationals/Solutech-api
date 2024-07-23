@@ -21,6 +21,10 @@ const laptopSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    site: {
+        type: String,
+        required: true,
+    },
     ram: {
         type: String,
     },
