@@ -27,8 +27,20 @@ export const saveCars = async (req: Request, res: Response) => {
 
 export const readCars = async (req: Request, res: Response) => {
     try {
-        const cars = await Car.find({});
-        res.status(200).send(cars);
+        const page = parseInt(req.query.page as string, 10) || 1;
+        // Set a fixed limit of 30 items per page
+        const limit = 32;
+        const skip = (page - 1) * limit;
+
+        // Fetch paginated laptops
+        const car = await Car.find().skip(skip).limit(limit);
+        const totalCara = await Car.countDocuments();
+
+        // Calculate total pages
+        const totalPages = Math.ceil(totalCara / limit);
+
+        // Send paginated response
+        res.status(200).send({car, totalPages});
     } catch (error) {
         res.status(500).send(error);
     }
