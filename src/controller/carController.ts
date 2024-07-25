@@ -93,3 +93,12 @@ export const deleteCar = async (req: Request, res: Response) => {
     }
 };
 
+export const deleteAllCars = async (req: Request, res: Response) => {
+    try {
+        await Car.deleteMany({});
+        res.status(200).send();
+    } catch (error) {
+        res.status(500).send(error);
+    }
+}
+

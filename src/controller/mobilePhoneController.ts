@@ -90,3 +90,12 @@ export const deleteMobilePhone = async (req: Request, res: Response) => {
         res.status(500).send(error);
     }
 };
+
+export const deleteMobilePhones = async (req: Request, res: Response) => {
+    try {
+        await MobilePhone.deleteMany({});
+        res.status(200).send();
+    } catch (error) {
+        res.status(500).send(error);
+    }
+}

@@ -8,7 +8,7 @@ import {
   readBikes,
   updateBike,
   deleteBike,
-  saveBikes,
+  saveBikes, deleteAllBikes,
 } from "../controller/bikeController.ts";
 
 router.post("/bike", createBike);
@@ -17,5 +17,6 @@ router.get("/bikes", readBikes);
 router.get("/bike/:id", readBike);
 router.put("/bike/:id", updateBike);
 router.delete("/bike/:id", deleteBike);
+router.delete("/bikes", deleteAllBikes);
 
 export default router;
