@@ -92,3 +92,12 @@ export const deleteBike = async (req: Request, res: Response) => {
         res.status(500).send(error);
     }
 };
+
+export const deleteAllBikes = async (req: Request, res: Response) => {
+    try {
+        await Bike.deleteMany({});
+        res.status(200).send();
+    } catch (error) {
+        res.status(500).send(error);
+    }
+};

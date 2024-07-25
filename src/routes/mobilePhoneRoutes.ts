@@ -8,7 +8,7 @@ import {
     readMobilePhones,
     updateMobilePhone,
     saveMobilePhones,
-    deleteMobilePhone
+    deleteMobilePhone, deleteMobilePhones
 } from '../controller/mobilePhoneController.ts';
 
 router.post('/mobilePhone', createMobilePhone);
@@ -17,5 +17,6 @@ router.get('/mobilePhones', readMobilePhones);
 router.get('/mobilePhone/:id', readMobilePhone);
 router.put('/mobilePhone/:id', updateMobilePhone);
 router.delete('/mobilePhone/:id', deleteMobilePhone);
+router.delete('/mobilePhones', deleteMobilePhones);
 
 export default router;

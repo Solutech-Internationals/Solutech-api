@@ -8,6 +8,7 @@ import cors from 'cors';
 import corsOptions from './config/corsOptions';
 import validateApiKey from './middleware/validateApiKey';
 import helmet from 'helmet';
+import microphoneRoutes from "./routes/microphoneRoutes.ts";
 
 const app = express();
 const port = process.env.APP_PORT || 8080;
@@ -25,6 +26,7 @@ app.use('/api/', laptopRoutes);
 app.use('/api/', mobilePhoneRoutes);
 app.use('/api/', carRoutes);
 app.use('/api/', bikeRoutes);
+app.use('/api/', microphoneRoutes);
 
 app.listen(port, () => {
     console.log(`Listening on port: ${port} `);
