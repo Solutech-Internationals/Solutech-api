@@ -27,8 +27,20 @@ export const saveLaptops = async (req: Request, res: Response) => {
 
 export const readLaptops = async (req: Request, res: Response) => {
     try {
-        const laptops = await Laptop.find({});
-        res.status(200).send(laptops);
+        const page = parseInt(req.query.page as string, 10) || 1;
+        // Set a fixed limit of 32 items per page
+        const limit = 32;
+        const skip = (page - 1) * limit;
+
+        // Fetch paginated laptops
+        const laptops = await Laptop.find().skip(skip).limit(limit);
+        const totalLaptops = await Laptop.countDocuments();
+
+        // Calculate total pages
+        const totalPages = Math.ceil(totalLaptops / limit);
+
+        // Send paginated response
+        res.status(200).send({ laptops, totalPages });
     } catch (error) {
         res.status(500).send(error);
     }
