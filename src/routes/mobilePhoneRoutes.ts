@@ -18,6 +18,6 @@ router.get('/mobilePhone/:id', readMobilePhone);
 router.put('/mobilePhone/:id', updateMobilePhone);
 router.delete('/mobilePhone/:id', deleteMobilePhone);
 router.delete('/mobilePhones', deleteMobilePhones);
-router.search('/mobilePhones', searchMobilePhones);
+router.search('/mobilePhonesSearch', searchMobilePhones);
 
 export default router;
