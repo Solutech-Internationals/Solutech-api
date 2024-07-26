@@ -115,10 +115,10 @@ export const searchCars = async (req: Request, res: Response) => {
 
         // Fetch paginated search results
         const regex = new RegExp(query, 'i');
-        const cars = await Car.find({ $text: { $search: query } })
+        const cars = await Car.find({ title: { $regex: regex } })
             .skip(skip)
             .limit(limit);
-        const totalCars = await Car.countDocuments({ $text: { $search: query } });
+        const totalCars = await Car.countDocuments({ title: { $regex: regex } });
 
         // Calculate total pages
         const totalPages = Math.ceil(totalCars / limit);

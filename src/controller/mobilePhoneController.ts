@@ -111,11 +111,11 @@ export const searchMobilePhones = async (req: Request, res: Response) => {
             return res.status(400).send({ error: 'Query parameter is required' });
         }
 
-        // Fetch paginated search results
-        const mobilePhones = await MobilePhone.find({ $text: { $search: query } })
+        const regex = new RegExp(query, 'i');
+        const mobilePhones = await MobilePhone.find({  title: { $regex: regex}  })
             .skip(skip)
             .limit(limit);
-        const totalMobilePhones = await MobilePhone.countDocuments({ $text: { $search: query } });
+        const totalMobilePhones = await MobilePhone.countDocuments({ title: { $regex: regex}  });
 
         // Calculate total pages
         const totalPages = Math.ceil(totalMobilePhones / limit);

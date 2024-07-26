@@ -113,11 +113,11 @@ export const searchBikes = async (req: Request, res: Response) => {
             return res.status(400).send({ error: 'Query parameter is required' });
         }
 
-        // Fetch paginated search results
-        const bikes = await Bike.find({ $text: { $search: query } })
+        const regex = new RegExp(query, 'i');
+        const bikes = await Bike.find({  title: { $regex: regex}  })
             .skip(skip)
             .limit(limit);
-        const totalBikes = await Bike.countDocuments({ $text: { $search: query } });
+        const totalBikes = await Bike.countDocuments({  title: { $regex: regex}  });
 
         // Calculate total pages
         const totalPages = Math.ceil(totalBikes / limit);

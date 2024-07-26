@@ -113,11 +113,11 @@ export const searchMicrophones = async (req: Request, res: Response) => {
             return res.status(400).send({ error: 'Query parameter is required' });
         }
 
-        // Fetch paginated search results
-        const microphones = await Microphone.find({ $text: { $search: query } })
+        const regex = new RegExp(query, 'i');
+        const microphones = await Microphone.find({ title: { $regex: regex }})
             .skip(skip)
             .limit(limit);
-        const totalMicrophones = await Microphone.countDocuments({ $text: { $search: query } });
+        const totalMicrophones = await Microphone.countDocuments({ title: { $regex: regex} });
 
         // Calculate total pages
         const totalPages = Math.ceil(totalMicrophones / limit);
