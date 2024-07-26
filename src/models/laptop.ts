@@ -71,4 +71,6 @@ const laptopSchema = new mongoose.Schema({
     timestamps: true,
 });
 
+laptopSchema.index({ title: 'text', description: 'text' });
+
 export const Laptop = mongoose.model('Laptop', laptopSchema);

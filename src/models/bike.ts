@@ -56,4 +56,6 @@ const bikeSchema = new mongoose.Schema({
     timestamps: true,
 });
 
+bikeSchema.index({ title: 'text', description: 'text' });
+
 export const Bike = mongoose.model('Bike', bikeSchema);

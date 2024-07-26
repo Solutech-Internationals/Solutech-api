@@ -99,3 +99,34 @@ export const deleteMobilePhones = async (req: Request, res: Response) => {
         res.status(500).send(error);
     }
 }
+
+export const searchMobilePhones = async (req: Request, res: Response) => {
+    try {
+        const query = req.query.query as string;
+        const page = parseInt(req.query.page as string, 10) || 1;
+        const limit = 32; // Fixed limit of items per page
+        const skip = (page - 1) * limit;
+
+        if (!query) {
+            return res.status(400).send({ error: 'Query parameter is required' });
+        }
+
+        // Fetch paginated search results
+        const mobilePhones = await MobilePhone.find({ $text: { $search: query } })
+            .skip(skip)
+            .limit(limit);
+        const totalMobilePhones = await MobilePhone.countDocuments({ $text: { $search: query } });
+
+        // Calculate total pages
+        const totalPages = Math.ceil(totalMobilePhones / limit);
+
+        // Send paginated response
+        res.status(200).send({ mobilePhones, totalPages });
+    } catch (error) {
+        if (error instanceof Error) {
+            res.status(500).send({ error: error.message });
+        } else {
+            res.status(500).send({ error: 'An unknown error occurred' });
+        }
+    }
+};

@@ -8,7 +8,7 @@ import {
   readCars,
   updateCar,
   deleteCar,
-  saveCars, deleteAllCars,
+  saveCars, deleteAllCars, searchCars
 } from "../controller/carController.ts";
 
 router.post("/car", createCar);
@@ -18,5 +18,6 @@ router.get("/car/:id", readCar);
 router.put("/car/:id", updateCar);
 router.delete("/car/:id", deleteCar);
 router.delete("/cars", deleteAllCars);
+router.get("/car", searchCars);
 
 export default router;

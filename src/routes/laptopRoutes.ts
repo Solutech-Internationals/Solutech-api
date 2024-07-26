@@ -9,7 +9,7 @@ import {
     updateLaptop,
     deleteLaptop,
     saveLaptops,
-    getLaptopsByCategories, deleteAllLaptops
+    getLaptopsByCategories, deleteAllLaptops, searchLaptops
 } from '../controller/laptopController.ts';
 
 router.post('/laptop', createLaptop);
@@ -20,5 +20,6 @@ router.put('/laptop/:id', updateLaptop);
 router.delete('/laptop/:id', deleteLaptop);
 router.get('/laptops', getLaptopsByCategories);
 router.delete('/laptops', deleteAllLaptops);
+router.get('/laptops', searchLaptops);
 
 export default router;

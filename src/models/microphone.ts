@@ -30,4 +30,6 @@ const microphoneSchema = new mongoose.Schema({
     timestamps: true
 });
 
+microphoneSchema.index({ title: 'text', description: 'text' });
+
 export const Microphone = mongoose.model('Microphone', microphoneSchema);

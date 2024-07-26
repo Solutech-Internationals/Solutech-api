@@ -29,4 +29,6 @@ const mobilePhoneSchema = new mongoose.Schema({
     timestamps: true,
 });
 
+mobilePhoneSchema.index({ title: 'text', description: 'text' });
+
 export const MobilePhone = mongoose.model('MobilePhone', mobilePhoneSchema);
