@@ -20,6 +20,6 @@ router.put('/laptop/:id', updateLaptop);
 router.delete('/laptop/:id', deleteLaptop);
 router.get('/laptops', getLaptopsByCategories);
 router.delete('/laptops', deleteAllLaptops);
-router.get('/laptops', searchLaptops);
+router.get('/laptopsSearch', searchLaptops);
 
 export default router;

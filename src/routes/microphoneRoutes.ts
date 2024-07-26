@@ -19,6 +19,6 @@ router.get('/microphone/:id', readMicrophone);
 router.put('/microphone/:id', updateMicrophone);
 router.delete('/microphone/:id', deleteMicrophone);
 router.delete('/microphones', deleteAllMicrophones);
-router.get('/microphones', searchMicrophones);
+router.get('/microphonesSearch', searchMicrophones);
 
 export default router;

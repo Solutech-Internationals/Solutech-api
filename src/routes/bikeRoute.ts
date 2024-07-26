@@ -18,6 +18,6 @@ router.get("/bike/:id", readBike);
 router.put("/bike/:id", updateBike);
 router.delete("/bike/:id", deleteBike);
 router.delete("/bikes", deleteAllBikes);
-router.get("/bikes", searchBikes);
+router.get("/bikesSearch", searchBikes);
 
 export default router;

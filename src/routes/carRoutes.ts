@@ -18,6 +18,6 @@ router.get("/car/:id", readCar);
 router.put("/car/:id", updateCar);
 router.delete("/car/:id", deleteCar);
 router.delete("/cars", deleteAllCars);
-router.get("/car", searchCars);
+router.get("/carsSearch", searchCars);
 
 export default router;
