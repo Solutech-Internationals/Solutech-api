@@ -9,7 +9,7 @@ import {
     updateMicrophone,
     saveMicrophones,
     deleteMicrophone,
-    deleteAllMicrophones
+    deleteAllMicrophones, searchMicrophones
 } from '../controller/microphoneController.ts';
 
 router.post('/microphone', createMicrophone);
@@ -19,5 +19,6 @@ router.get('/microphone/:id', readMicrophone);
 router.put('/microphone/:id', updateMicrophone);
 router.delete('/microphone/:id', deleteMicrophone);
 router.delete('/microphones', deleteAllMicrophones);
+router.get('/microphones', searchMicrophones);
 
 export default router;

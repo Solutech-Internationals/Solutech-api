@@ -102,3 +102,35 @@ export const deleteAllCars = async (req: Request, res: Response) => {
     }
 }
 
+export const searchCars = async (req: Request, res: Response) => {
+    try {
+        const query = req.query.query as string;
+        const page = parseInt(req.query.page as string, 10) || 1;
+        const limit = 32; // Fixed limit of items per page
+        const skip = (page - 1) * limit;
+
+        if (!query) {
+            return res.status(400).send({ error: 'Search query parameter is required' });
+        }
+
+        // Fetch paginated search results
+        const regex = new RegExp(query, 'i');
+        const cars = await Car.find({ $text: { $search: query } })
+            .skip(skip)
+            .limit(limit);
+        const totalCars = await Car.countDocuments({ $text: { $search: query } });
+
+        // Calculate total pages
+        const totalPages = Math.ceil(totalCars / limit);
+
+        // Send paginated response
+        res.status(200).send({ cars, totalPages });
+    } catch (error) {
+        if (error instanceof Error) {
+            res.status(500).send({ error: error.message });
+        } else {
+            res.status(500).send({ error: 'An unknown error occurred' });
+        }
+    }
+};
+

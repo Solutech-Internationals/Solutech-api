@@ -56,4 +56,6 @@ const carSchema = new mongoose.Schema({
     timestamps: true,
 });
 
+carSchema.index({ title: 'text', description: 'text' });
+
 export const Car = mongoose.model('Car', carSchema);
